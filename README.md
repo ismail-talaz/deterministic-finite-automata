@@ -23,4 +23,6 @@ qf b qf
 ```
 
 - It creates this deterministic finite automata :
+
+
 ![img](https://miro.medium.com/v2/resize:fit:514/1*Q35rZMtMP4MF8TiOoDZLmw.jpeg)
