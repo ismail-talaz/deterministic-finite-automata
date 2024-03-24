@@ -12,11 +12,11 @@
 - In the next n lines, give transitions in this format : s1 character s2
 - Here is the one sample:
 
-``` q0 qf
-q0 
-qf  
-4  
-q0 a q0  
+``` q0 qf   // All states
+q0          // Start state
+qf          // Final state
+4           // Number of transitions
+q0 a q0     // Transitions
 q0 a qf  
 qf a qf  
 qf b qf
