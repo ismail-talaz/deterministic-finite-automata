@@ -12,11 +12,11 @@
 - In the next n lines, give transitions in this format : s1 character s2
 - Here is the one sample:
 
-`q0 qf
-q0
-qf
-4
-q0 a q0
-q0 a qf 
-qf a qf
-qf b qf`
+`q0 qf`
+`q0`
+`qf`
+`4`
+`q0 a q0`
+`q0 a qf `
+`qf a qf`
+`qf b qf`
