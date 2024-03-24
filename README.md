@@ -13,10 +13,10 @@
 - Here is the one sample:
 
 `q0 qf`
-`q0`
-`qf`
-`4`
-`q0 a q0`
-`q0 a qf `
-`qf a qf`
-`qf b qf`
+q0
+qf
+4
+q0 a q0
+q0 a qf <br>
+qf a qf
+qf b qf`
