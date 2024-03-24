@@ -26,3 +26,6 @@ qf b qf
 
 
 ![img](https://miro.medium.com/v2/resize:fit:514/1*Q35rZMtMP4MF8TiOoDZLmw.jpeg)
+
+
+- You can use instance.inThisLanguage(word) function to check whether DFA accepts the string word or not.
