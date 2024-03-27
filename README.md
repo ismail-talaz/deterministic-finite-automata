@@ -1,8 +1,8 @@
-## Deterministic Finite Automata
+## Deterministic/Non-deterministic Finite Automata
 
-- You can create a deterministic finite automata by giving configuration.
+- You can create a deterministic/non-deterministic finite automata by giving configuration.
 
-### How can I create DFA with configuration?
+### How can I create DFA/NFA with configuration?
 
 - After creating an instance of DFA class, use instance.configuration() function. It takes configuration from input stream.
 - In the first line, give state names which are seperated by blank (' ').
@@ -28,4 +28,5 @@ qf b qf
 ![img](https://miro.medium.com/v2/resize:fit:514/1*Q35rZMtMP4MF8TiOoDZLmw.jpeg)
 
 
-- You can use instance.inThisLanguage(word) function to check whether DFA accepts the string word or not.
+- You can use instance.inThisLanguage(word) function to check whether DFA/NFA accepts the string word or not.
+- Char 'e' means empty transition. You cannot utilize standard 'e' character.
