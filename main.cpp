@@ -1,4 +1,5 @@
-#include "dfah.h"
+//#include "dfah.h"
+#include "nfa.h"
 #include <string>
 #include <vector>
 
@@ -7,11 +8,11 @@ using namespace std;
 
 int main(){
 
-    DFA machine;
+    NFA machine;
 
     machine.configuration();
 
-    cout << "Result: " << machine.isInLanguage("abc");
+    cout << "Result: " << machine.isInLanguage("");
 
 
     return 0;

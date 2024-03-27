@@ -16,13 +16,11 @@ struct State{
 
 class NFA{
     public:
-        //std::vector<std::string> codeToName;
-        
-        /*void configuration();
+        void configuration();
         void printStates();
-        bool isInLanguage(std::string word);*/
+        bool isInLanguage(std::string word);
     private:
-        /*std::vector<State> states;
+        std::vector<State> states;
         std::string getStartState();
         bool langHelper(std::string currentState, std::string word);
         bool isFinalState(std::string stateName);
@@ -33,7 +31,7 @@ class NFA{
         void processTransition(std::string inputString);
         void insertTransition(std::string pos1, std::string pos2, char weight);
         int nameToCode(std::string stateName);
-        std::string codeToName(int code); */
+        std::string codeToName(int code); 
 };
 
 
@@ -75,7 +73,7 @@ bool NFA::langHelper(std::string currentState, std::string word){
     else{  
         int code = nameToCode(currentState);
         char utilized = word[0];
-        std::vector<int> neighbors = states[code].edges[int(weight)];
+        std::vector<int> neighbors = states[code].edges[int(utilized)];
         std::vector<int> emptyneighbors = states[code].edges[int('e')];
 
         bool key = false;
@@ -85,7 +83,7 @@ bool NFA::langHelper(std::string currentState, std::string word){
             key = (key || langHelper(neighborName, word.substr(1)));
         }
 
-        for(int int neighborCode : emptyneighbors){
+        for(int neighborCode : emptyneighbors){
             std::string neighborName = codeToName(neighborCode);
             key = (key || langHelper(neighborName, word));
         }
@@ -121,7 +119,7 @@ void NFA::insertStates(std::vector<std::string> newStates){
         newState.name = stateName;
         newState.isFinal = false;
         newState.isStart = false;
-        newState.edges = std::vector<int>(128,-1);
+        newState.edges = std::vector<std::vector<int>>(128,std::vector<int>());
 
         states.push_back(newState);
     }
@@ -216,7 +214,7 @@ void NFA::processTransition(std::string inputString){
 void NFA::insertTransition(std::string pos1, std::string pos2, char weight){
     int code1 = nameToCode(pos1);
     int code2 = nameToCode(pos2);
-    states[code1].edges[int(weight)] = code2;
+    (states[code1].edges[int(weight)]).push_back(code2);
 }
 
 int NFA::nameToCode(std::string stateName){
